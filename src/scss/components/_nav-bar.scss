@@ -1,0 +1,21 @@
+// Adds styles to existing Bootstrap class 'navbar'
+.navbar {
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Adds styles to existing Bootstrap class 'navbar-brand'
+.navbar-brand {
+  position: relative;
+}
+
+.testing-stage-label {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  color: $primary;
+  // text-shadow: -1px -1px 1px #fff;
+  font-size: 0.75rem;
+}

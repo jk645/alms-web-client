@@ -1,0 +1,17 @@
+.footer-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container__main {
+  flex-grow: 1;
+  padding-bottom: 3rem;
+}
+
+.footer {
+  font-size: $font-size-sm;
+  background-color: $gray-100;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

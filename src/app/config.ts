@@ -1,4 +1,5 @@
 export const CONFIG = {
+  testingStageLabel: 'beta',
   noAuthInterceptorEndpoints: [
     {
       url: 'auth',
