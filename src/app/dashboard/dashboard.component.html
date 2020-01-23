@@ -1,1 +1,27 @@
-<p>dashboard works!</p>
+<div class="footer-container">
+  <div class="footer-container__main">
+    <app-nav-bar></app-nav-bar>
+    <div class="container-fluid mb-5">
+      <div class="row justify-content-sm-center" *ngIf="courses && courses.length === 0">
+        <div class="col-sm-6">
+          <h1 class="mt-4">Welcome</h1>
+          <p class="lead">You don't belong to any courses yet.</p>
+        </div>
+      </div>
+      <div *ngIf="courses && courses.length > 0">
+        <h1 class="my-4 text-muted">Dashboard</h1>
+        <div class="my-5" *ngFor="let course of courses">
+          <div class="mb-3 text-muted">
+            <div>Course</div>
+            <h2 class="h3">
+              <a class="d-inline-block" [routerLink]="['/courses', course._id]">
+                {{ course.name }}
+              </a>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

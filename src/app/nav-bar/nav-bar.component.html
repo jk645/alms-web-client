@@ -10,17 +10,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <ng-container *ngIf="!user.unclaimed">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/find-tasks" routerLinkActive="active">Find tasks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/organizations" routerLinkActive="active">Organizations</a>
-          </li>
-        </ng-container>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/find-courses" routerLinkActive="active">Find Courses</a>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown" ngbDropdown>
@@ -29,11 +24,8 @@
             <span class="ml-2">{{ user.fName }} {{ user.lName }}</span>
           </button>
           <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="navbarDropdown">
-            <ng-container *ngIf="!user.unclaimed">
-              <a class="dropdown-item" [routerLink]="['/users', user._id]">My profile</a>
-              <a class="dropdown-item" routerLink="/billing">Billing</a>
-              <div class="dropdown-divider"></div>
-            </ng-container>
+            <a class="dropdown-item" [routerLink]="['/users', user._id]">My profile</a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#" (click)="logOut()">Logout</a>
           </div>
         </li>
