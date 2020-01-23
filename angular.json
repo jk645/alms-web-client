@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/scss/main.scss"
             ],
             "scripts": []
           },
@@ -34,6 +35,35 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
                 }
               ],
               "optimization": true,
@@ -68,6 +98,9 @@
           "configurations": {
             "production": {
               "browserTarget": "alms-web-client:build:production"
+            },
+            "qa": {
+              "browserTarget": "alms-web-client:build:qa"
             }
           }
         },
@@ -89,7 +122,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/scss/main.scss"
             ],
             "scripts": []
           }
@@ -116,6 +150,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "alms-web-client:serve:production"
+            },
+            "qa": {
+              "devServerTarget": "alms-web-client:serve:qa"
             }
           }
         }
