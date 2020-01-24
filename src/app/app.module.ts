@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     DashboardComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,13 @@ import { FooterComponent } from './footer/footer.component';
     FontAwesomeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

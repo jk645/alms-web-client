@@ -33,13 +33,7 @@ export class DashboardComponent implements OnInit {
     this.fetchingCourses = true;
     this.fetchingCoursesError = null;
 
-    this.courses = [
-      {name: 'Intensive Thinking Strategically in the Digital Age (MGMTMBA 200)'},
-      {name: 'Merage Consulting Projects (MGMTMBA 298)'},
-      {name: 'New Venture Management (MGMTMBA 213)'},
-      {name: 'Organizational Leadership for Management (MGMTMBA 202)'},
-      {name: 'Business Law (MGMTMBA 292)'},
-    ];
+    this.courses = [];
   }
 
 }

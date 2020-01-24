@@ -6,6 +6,9 @@
         <div class="col-sm-6">
           <h1 class="mt-4">Welcome</h1>
           <p class="lead">You don't belong to any courses yet.</p>
+          <p>
+            <a routerLink="/courses">Find Courses</a>
+          </p>
         </div>
       </div>
       <div *ngIf="courses && courses.length > 0">
@@ -15,7 +18,7 @@
             <div>Course</div>
             <h2 class="h3">
               <a class="d-inline-block" [routerLink]="['/courses', course._id]">
-                {{ course.name }}
+                {{ course.title }}
               </a>
             </h2>
           </div>

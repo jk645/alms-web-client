@@ -6,6 +6,7 @@ import { AuthGuard } from './auth-guard.service';
 
 import { LoginComponent } from '../login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { CoursesComponent } from '../courses/courses.component';
 
 
 const appRoutes = [
@@ -22,6 +23,11 @@ const appRoutes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent,
     canActivate: [AuthGuard]
   },
 ];

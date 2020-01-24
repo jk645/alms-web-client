@@ -1,0 +1,26 @@
+<div class="footer-container">
+  <div class="footer-container__main">
+    <app-nav-bar></app-nav-bar>
+    <div class="container-fluid mb-5">
+      <h1 class="my-4 text-muted">Find Courses</h1>
+      <div class="my-3" *ngIf="fetchingCourses">
+        Fetching courses <fa-icon [icon]="faSpinner" size="lg" [spin]="true" class="ml-1"></fa-icon>
+      </div>
+      <div class="my-3" *ngIf="fetchingCoursesError">
+        <p class="text-danger">Error fetching courses:</p>
+        <pre class="pre-scrollable border p-2">{{ fetchingCoursesError | json }}</pre>
+      </div>
+      <div class="my-5" *ngFor="let course of courses">
+        <div class="mb-3 text-muted">
+          <div>{{ course.section }}</div>
+          <h2 class="h3">
+            <a class="d-inline-block" [routerLink]="['/courses']">
+              {{ course.title }}
+            </a>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

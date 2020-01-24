@@ -14,7 +14,7 @@
           <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/find-courses" routerLinkActive="active">Find Courses</a>
+          <a class="nav-link" routerLink="/courses" routerLinkActive="active">Find Courses</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -24,8 +24,10 @@
             <span class="ml-2">{{ user.fName }} {{ user.lName }}</span>
           </button>
           <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="navbarDropdown">
+            <!--
             <a class="dropdown-item" [routerLink]="['/users', user._id]">My profile</a>
             <div class="dropdown-divider"></div>
+            -->
             <a class="dropdown-item" href="#" (click)="logOut()">Logout</a>
           </div>
         </li>

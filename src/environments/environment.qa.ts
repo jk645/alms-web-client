@@ -3,5 +3,5 @@
 // to use a different API instance so it can use a different database.
 export const environment = {
   production: true,
-  apiUrl: '',
+  apiUrl: 'https://api.stuffsort.com/api',
 };
